@@ -1,0 +1,79 @@
+.bg-green {
+    background-color: #114131;
+    min-height: 100vh;
+}
+
+.custom-card {
+    background-color: #2F6B5A;
+    color: white;
+    border: none;
+    border-radius: 12px;
+}
+.custom-card {
+    background-color: rgba(255, 255, 255, 0.10);
+    backdrop-filter: blur(4px);
+    color: white;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 12px;
+    transition: 0.3s;
+}
+
+.custom-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+}
+
+.grafico-container {
+    display: inline-block;
+    transform: rotate(-75deg); 
+}
+
+.grafico {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: conic-gradient(
+        #0344dcaf 0deg 70deg,     
+        #04d43858 0deg 270deg,   
+        #35fc85aa 0deg 90deg   
+    );
+    position: relative;
+    transform: rotate(deg);
+    transition: 0.3s ease;
+}
+.grafico:hover {
+    transform: scale(1.05);                    
+}
+
+.grafico::after {
+    content: "";
+    width: 120px;
+    height: 120px;
+    background-color: #114131;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.btn-gray {
+    background-color: #D9D9D9;
+    color: #144e3b;
+    border: none;
+    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.btn-gray:hover {
+    background-color: #3fc19667;
+    transform: scale(1.05);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+}
+
+@media (max-width: 576px) {
+h2 { font-size: 26px; }
+.grafico-container { width: 220px; height: 220px; }
+.grafico { width: 170px; height: 170px; }
+}
